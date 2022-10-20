@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #lightbox {
+            display: none;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            right: 50px;
+            bottom: 50px;
+        }
+
+        .visible {
+            display: block;
+        }
+
+        #soundBlock {
+            display: flex;
+            margin: 70px;
+        }
+
+        #infoBlock {
+            margin-left: 70px;
+        }
+    </style>
+</head>
+<body>
+    <div id="infoBlock">
+        <p>Press a key in the text box</p>
+        <pre>
+            "b" - boom
+            "c" - clap
+            "h" - hihat
+            "k" - kick
+            "o" - openhat
+            "r" - ride
+            "s" - snare
+            "t" - tink
+            "x" - tom</pre>
+        <label for="channel1">Kanal 1:</label>
+        <input type="text" id="channel1" size="40" onkeydown="onKeyPress(event)">
+        <label for="channel1">Kanal 2:</label>
+        <input type="text" id="channel2" size="40" onkeydown="onKeyPress(event)">
+        <label for="channel1">Kanal 3:</label>
+        <input type="text" id="channel3" size="40" onkeydown="onKeyPress(event)">
+        <label for="channel1">Kanal 4:</label>
+        <input type="text" id="channel4" size="40" onkeydown="onKeyPress(event)">
+        <p id="demo"></p>
+    </div>
+    <div id="soundBlock">
+        <!-- <div>
+            <label for="boom">Boom:</label><br>
+        <audio src="./sounds/boom.wav" controls id="boom"></audio>
+        </div> -->
+
+        <audio src="./sounds/boom.wav" controls id="boom"></audio>
+        <audio src="./sounds/clap.wav" controls id="clap"></audio>
+        <audio src="./sounds/hihat.wav" controls id="hihat"></audio>
+        <audio src="./sounds/kick.wav" controls id="kick"></audio>
+        <audio src="./sounds/openhat.wav" controls id="openhat"></audio>
+        <audio src="./sounds/ride.wav" controls id="ride"></audio><br>
+        <audio src="./sounds/snare.wav" controls id="snare"></audio>
+        <audio src="./sounds/tink.wav" controls id="tink"></audio>
+        <audio src="./sounds/tom.wav" controls id="tom"></audio>
+    </div>
+    <script src="drumkit.js"></script>
+</body>
+</html>
