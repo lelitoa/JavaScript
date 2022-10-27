@@ -6,6 +6,7 @@ function onKeyPress(event) {
     // ktory dzwiek w zaleznosci od klawisza
     //     const sound = 'clap'
     //     playSound(sound)
+
     document.getElementById("demo").innerHTML = "The pressed key was: " + key;
 
     switch(key) {
