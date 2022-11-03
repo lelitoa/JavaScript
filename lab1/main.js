@@ -2,6 +2,7 @@ var numId = 3;
 const addNewInput = document.querySelector("#addNewInput");
 const container = document.getElementById("container");
 
+//dodanie pola
 addNewInput.addEventListener("click", () => {
     numId += 1;
     
@@ -16,7 +17,25 @@ addNewInput.addEventListener("click", () => {
     newDeleteBtn.textContent = "usun"; 
 });
 
+//usuwanie pola
+const btnId = 0;
+const btnsId = document.getElementsByTagName("button");
 
+const btnPress = (id) => {
+    btnId = id.target.id;
+    const btnDelete = document.getElementById(btnId);
+    const inputDelete = document.getElementsByClassName(btnId);
+    var reqElement = inputDelete[0];
+
+    if(btnDelete?.innerHTML == "usun") {
+        reqElement?.remove();
+        btnDelete?.remove();
+    }
+};
+
+for(let btn of btnsId) {
+    btn.addEventListener("click", btnPress);
+}
 
 const num1 = document.querySelector('#num1')
 const num2 = document.querySelector('#num2')
