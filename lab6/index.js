@@ -4,7 +4,7 @@ let ball = document.querySelector('.ball');
 let initial_ball_coord = ball.getBoundingClientRect();
 let ball_coord = initial_ball_coord;
 let board_coord = board.getBoundingClientRect();
-  
+
 let dx = Math.floor(Math.random() * 4) + 3;
 let dy = Math.floor(Math.random() * 4) + 3;
 let dxd = Math.floor(Math.random() * 2);

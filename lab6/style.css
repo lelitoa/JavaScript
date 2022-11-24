@@ -47,7 +47,7 @@ body {
     height: 100%;
     width: 100%;
     border-radius: 100px;
-    animation: spinBall 0.1s linear infinite;
+    animation: spinBall 1s linear infinite;
     box-shadow: inset 0 0 18px #fff, 
         inset 6px 0 18px violet, 
         inset -6px 0 18px #0ff, 
@@ -57,7 +57,7 @@ body {
         violet, 4px 0 18px #0ff;
 }
 
-@keyframes SpinBall {
+@keyframes spinBall {
     100% {
         -webkit-transform: rotate(360deg);
         transform: rotate(360deg);
