@@ -10,6 +10,19 @@ let dy = Math.floor(Math.random() * 4) + 3;
 let dxd = Math.floor(Math.random() * 2);
 let dyd = Math.floor(Math.random() * 2);
 
+// window.addEventListener('deviceorientation', onDeviceMove)
+
+// function onDeviceMove(event) {
+//     console.log(event)
+// }
+
+// function animate() {
+//     //    console.log(Date.now())
+//     // requestAnimationFrame(animate)
+// }
+
+// requestAnimationFrame(animate)
+
 requestAnimationFrame(() => {
     dx = Math.floor(Math.random() * 4) + 3;
     dy = Math.floor(Math.random() * 4) + 3;
@@ -30,11 +43,7 @@ function moveBall(dx, dy, dxd, dyd) {
       dx = Math.floor(Math.random() * 4) + 3;
       dy = Math.floor(Math.random() * 4) + 3;
     }
-    if (
-      ball_coord.right >= paddle_2_coord.left &&
-      ball_coord.top >= paddle_2_coord.top &&
-      ball_coord.bottom <= paddle_2_coord.bottom
-    ) {
+     {
       dxd = 0;
       dx = Math.floor(Math.random() * 4) + 3;
       dy = Math.floor(Math.random() * 4) + 3;
@@ -43,13 +52,13 @@ function moveBall(dx, dy, dxd, dyd) {
       ball_coord.left <= board_coord.left ||
       ball_coord.right >= board_coord.right
     ) {  
-      ball_coord = initial_ball_coord;
-      ball.style = initial_ball.style;
+      // ball_coord = initial_ball_coord;
+      // ball.style = initial_ball.style;
       return;
     }
     ball.style.top = ball_coord.top + dy * (dyd == 0 ? -1 : 1) + 'px';
     ball.style.left = ball_coord.left + dx * (dxd == 0 ? -1 : 1) + 'px';
-    ball_coord = ball.getBoundingClientRect();
+    // ball_coord = ball.getBoundingClientRect();
     requestAnimationFrame(() => {
       moveBall(dx, dy, dxd, dyd);
     });
