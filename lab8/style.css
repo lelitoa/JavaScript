@@ -1,8 +1,22 @@
 body {
     margin: 0px;
-    padding: 0px;
+    padding: 10px;
+    background-image: linear-gradient(
+        to top, #ffda77, #ffa45b);
 }
 
 #field {
-    background-color: rgba(167, 162, 150, 0.609);
+    /* background-color: grey; */
+}
+
+#ball-amount {
+    margin: 10px;
+    padding: 10px;
+}
+
+canvas {
+    margin: 0;
+    padding: 0;
+    border: solid 1px black;
+    display: block;
 }
