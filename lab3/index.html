@@ -4,31 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        #lightbox {
-            display: none;
-            position: absolute;
-            top: 50px;
-            left: 50px;
-            right: 50px;
-            bottom: 50px;
-        }
-
-        .visible {
-            display: block;
-        }
-
-        #soundBlock {
-            display: flex;
-            margin: 70px;
-        }
-
-        #infoBlock {
-            margin-left: 70px;
-        }
-    </style>
-</head>
+    <title>Drumkit</title>
+    <link rel="stylesheet" href="style.css">
 <body>
     <div id="infoBlock">
         <p>Press a key in the text box</p>
@@ -42,22 +19,35 @@
             "s" - snare
             "t" - tink
             "x" - tom</pre>
-        <label for="channel1">Kanal 1:</label>
-        <input type="text" id="channel1" size="40" onkeydown="onKeyPress(event)">
-        <label for="channel1">Kanal 2:</label>
-        <input type="text" id="channel2" size="40" onkeydown="onKeyPress(event)">
-        <label for="channel1">Kanal 3:</label>
-        <input type="text" id="channel3" size="40" onkeydown="onKeyPress(event)">
-        <label for="channel1">Kanal 4:</label>
-        <input type="text" id="channel4" size="40" onkeydown="onKeyPress(event)">
+
+        <div class="controls">
+            <div>
+                <button class="recordBtn lighten">record</button>
+                <button class="playBtn">play</button>
+            </div>
+            <div>
+                <button class="recordBtn lighten">record</button>
+                <button class="playBtn">play</button>
+            </div>
+            <div>
+                <button class="recordBtn lighten">record</button>
+                <button class="playBtn">play</button>
+            </div>
+            <div>
+                <button class="recordBtn lighten">record</button>
+                <button class="playBtn">play</button>
+            </div><br>
+        </div>
+        <div class="controls row">
+            <button id="playAll">Play All</button>
+            <div class="recLength">
+                <input type="range" id="recordLenght" min="0" max="30" value="7"/>
+                <label id="recordLenghtLabel" for="recordLenght">Recording time: 7 seconds</label>
+            </div>
+        </div>
         <p id="demo"></p>
     </div>
     <div id="soundBlock">
-        <!-- <div>
-            <label for="boom">Boom:</label><br>
-        <audio src="./sounds/boom.wav" controls id="boom"></audio>
-        </div> -->
-
         <audio src="./sounds/boom.wav" controls id="boom"></audio>
         <audio src="./sounds/clap.wav" controls id="clap"></audio>
         <audio src="./sounds/hihat.wav" controls id="hihat"></audio>
