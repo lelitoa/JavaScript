@@ -6,19 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lab1</title>
 </head>
+<style>
+    body {
+        background-color:bisque;
+        text-align: center;
+    }
+    #shame, #normal {
+        border-style: ridge;
+        margin: 5px;
+        padding: 10px;
+    }
+</style>
 <body>
-    <button type="button" id="addNewInput">dodaj</button>&nbsp;
-    <input type="text" id="result">
-    <button id="przelicz">przelicz</button><br><br>
-    <div id="container">
-        <input type="text" class="deleteNum1" id="num1">
-        <button type="button" id="deleteNum1">usun</button>
-        <input type="text" class="deleteNum2" id="num2">
-        <button type="button" id="deleteNum2">usun</button>
-        <input type="text" class="deleteNum3" id="num3">
-        <button type="button" id="deleteNum3">usun</button>
+    <a>Wersja shame</a>
+    <div id="shame">
+        <a>Podaj liczby</a><br><br>
+        <div>
+            <button id="calc">przelicz</button><br><br>
+            <input type="text" id="input1">
+            <input type="text" id="input2">
+            <input type="text" id="input3">
+            <input type="text" id="input4">
+        </div>
+        <p id="result"></p>
+    </div>
+        <br>
+    <a>Wersja normal & zieew</a>
+    <div id="normal">
+        <button type="button" id="add">dodaj</button>&nbsp;
+        <br><br>
+        <div id="fields"></div>
+        <p id="result2"></p>
     </div>
 
     <script src="main.js" type="text/javascript"></script>
+    <script type="text/javascript"></script>
 </body>
 </html>

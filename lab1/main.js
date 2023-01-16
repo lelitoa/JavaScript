@@ -1,60 +1,69 @@
-var numId = 3;
-const addNewInput = document.querySelector("#addNewInput");
-const container = document.getElementById("container");
+//werjsa shame
+const result = document.querySelector('#result');
+var num1, num2, num3, num4;
 
-//dodanie pola
-addNewInput.addEventListener("click", () => {
-    numId += 1;
-    
-    const newNum = document.createElement("input");
-    container.appendChild(newNum);
-    newNum.setAttribute("id", "num" + numId);
-    newNum.setAttribute("class", "deleteNum" + numId);
-    
-    const newDeleteBtn = document.createElement("button");
-    container.appendChild(newDeleteBtn);
-    newDeleteBtn.setAttribute("id", "deleteNum" + numId)
-    newDeleteBtn.textContent = "usun"; 
-});
+function Calculate(){
+    num1 = document.getElementById("input1").value;
+    num2 = document.getElementById("input2").value;
+    num3 = document.getElementById("input3").value;
+    num4 = document.getElementById("input4").value;
+    let table = [num1, num2, num3, num4];
 
-//usuwanie pola
-const btnId = 0;
-const btnsId = document.getElementsByTagName("button");
-
-const btnPress = (id) => {
-    btnId = id.target.id;
-    const btnDelete = document.getElementById(btnId);
-    const inputDelete = document.getElementsByClassName(btnId);
-    var reqElement = inputDelete[0];
-
-    if(btnDelete?.innerHTML == "usun") {
-        reqElement?.remove();
-        btnDelete?.remove();
+    for (let i of num) {
+        table.push(parseInt(i.value));
     }
-};
 
-for(let btn of btnsId) {
-    btn.addEventListener("click", btnPress);
+    const res = table.reduce((sum, val) => sum + val);
+    result.innerHTML = `Suma: ${res}, Średnia: ${res/table.length}, 
+    Min: ${Math.min(...table)}, Max: ${Math.max(...table)}`
 }
 
-const num1 = document.querySelector('#num1')
-const num2 = document.querySelector('#num2')
-const num3 = document.querySelector('#num3')
-const num4 = document.querySelector('#num4')
+let calculate = document.getElementById("calc");
+calculate.addEventListener('click', Calculate);
 
-const przeliczBtn = document.querySelector('#przelicz')
-console.dir(num1)
+//wersja normal & zieew
+const result2 = document.querySelector('#result2');
+const num=document.getElementsByClassName('num');
 
-// const amount = parseInt(num1) + parseInt(num2) + parseInt(num3) + parseInt(num4)
-const amount = num1.value + num2.value + num3.value + num4.value
-const average = parseInt(amount) / 4
-const minimum = Math.min(parseInt(num1), parseInt(num2), parseInt(num3), parseInt(num4))
-const maximum = Math.max(parseInt(num1), parseInt(num2), parseInt(num3), parseInt(num4))  
+let div, input, button;
 
-przeliczBtn.addEventListener('click', () => {
-    // console.log(num1.value)
-    console.log(num1.value + num2.value + num3.value + num4.value)
-    console.log('Suma:' + parseInt(amount.value) + ' Srednia:' + parseInt(average) + ' Minimum:' + parseInt(minimum) + ' Maximum:' + parseInt(maximum))
-})
+function Add(){
+    div = document.createElement("div");
+    input = document.createElement('input');
+    button = document.createElement('button');
+    //usuwanie pola
+    button.innerHTML="usuń";
+    button.addEventListener('click',(ev)=>{
+        ev.currentTarget.parentNode.remove();
+        Calc();
+    });
 
-// Math.max(), Math.min()
+    //dodwanie pola
+    input.type = "number";
+    input.value = 0;
+    input.className = "num"
+
+    input.addEventListener('input', Calc);
+    div.appendChild(input);
+    div.appendChild(button);
+
+    document.querySelector("#fields").appendChild(div);
+    Calc();
+}
+
+function Calc(){
+    let table = []; 
+    for (let i of num) {
+        table.push(parseInt(i.value));
+    }
+
+    const res = table.reduce((sum, val) => sum + val);
+    result2.innerHTML = `Suma: ${res}, Średnia: ${res/table.length}, 
+    Min: ${Math.min(...table)}, Max: ${Math.max(...table)}`
+}
+
+let add = document.getElementById("add");
+add.addEventListener('click', Add);
+Add();
+Add();
+Add();
