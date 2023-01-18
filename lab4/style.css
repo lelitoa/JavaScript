@@ -1,0 +1,138 @@
+html,
+body {
+    background: #696e9e;
+    height: 100%;
+    margin: 0;
+}
+
+.notes {
+    display: flex;
+    height: 100%;
+}
+
+.notes * {
+    font-family: sans-serif;
+}
+
+.notes__sidebar {
+    border-right: 2px solid #dddddd;
+    flex-shrink: 0;
+    overflow-y: auto;
+    padding: 1em;
+    width: 300px;
+}
+
+.notes__add {
+    background: #009578;
+    border: none;
+    border-radius: 7px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1.25em;
+    font-weight: bold;
+    margin-bottom: 1em;
+    padding: 0.75em 0;
+    width: 100%;
+}
+
+.notes__add:hover {
+    background: #00af8c;
+}
+
+.notes__list-item {
+    cursor: pointer;
+}
+
+.notes__list-item--selected {
+    background: #eeeeee;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+.notes__small-title,
+.notes__small-updated {
+    padding: 10px;
+}
+
+.notes__small-title {
+    font-size: 1.2em;
+}
+
+.notes__small-body {
+    padding: 0 10px;
+}
+
+.notes__small-updated {
+    color: #aaaaaa;
+    font-style: italic;
+    text-align: right;
+}
+
+.notes__preview {
+    display: flex;
+    flex-direction: column;
+    padding: 2em 3em;
+    flex-grow: 1;
+}
+
+.notes__title,
+.notes__body {
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.notes__title {
+    background: #9599c5;
+    border-radius: 12px;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.notes__body {
+    background: #9599c5;
+    border-radius: 12px;
+    flex-grow: 1;
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-top: 2em;
+    resize: none;
+}
+
+.info {
+    border-radius: 7px;
+    background: #9599c5;
+
+}
+
+.colorNotes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.colorNotes div{
+    margin-top: 25px;
+    width: 20px;
+    height: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    border-radius: 100%;
+    cursor:pointer;
+}
+
+.red{
+    background-color: lightcoral!important;
+}
+
+.green{
+    background-color: lightgreen!important;
+}
+
+.blue{
+    background-color: lightblue!important;
+}
+
+.active{
+    border: solid 2px;
+}
