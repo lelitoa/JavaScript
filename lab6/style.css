@@ -14,28 +14,28 @@ body {
     align-items: center;
 }
 
-.board {
-    height: 85vh;
-    width: 80vw;
+#board {
+    height: 97vh;
+    width: 97vw;
     background-image: linear-gradient(
         to right, #5c6e91, #839b97);
     border-radius: 14px;
 }
 
-.ball {
+#ball {
     background-color: black;
-    height: 30px;
-    width: 30px;
+    height: 50px;
+    width: 50px;
     border-radius: 50%;
     position: fixed;
     /* top: calc(50% - 15px);
     left: calc(50% - 15px); */
 }
 
-.hole {
+#hole {
     background-color: white;
-    height: 40px;
-    width: 40px;
+    height: 50px;
+    width: 50px;
     border-radius: 50%;
     border: 3px solid black;
     position: fixed;
