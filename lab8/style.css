@@ -5,13 +5,19 @@ body {
         to top, #ffda77, #ffa45b);
 }
 
-#field {
-    /* background-color: grey; */
+#count, #lines {
+    margin: 5px;
+    padding: 7px;
 }
 
-#ball-amount {
-    margin: 10px;
-    padding: 10px;
+#start, #reset {
+    margin: 5px;
+}
+
+#move, #eat {
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
 }
 
 canvas {

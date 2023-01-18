@@ -8,14 +8,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <input type="text" id="ball-amount">
     <button id="start">start</button>
     <button id="reset">reset</button>
+    <a>Amount</a>
+    <input type="text" id="count">
+    <a>Lines</a>
+    <input type="text" id="lines">
+    <label for="move">Mouse move</label>
+    <input type="checkbox" name="move" id="move">
+    <label for="eat">Eat connection</label>
+    <input type="checkbox" name="eat" id="eat">
 
     <canvas id="field" width="1500" height="700"></canvas>
 
-    <script type="module" src="./index.js"></script>
-    <script type="module" src="./effects.js"></script>
+    <script type="module" src="./main.js"></script>
     <script type="module" src="./ball.js"></script>
+    <script type="module" src="./effects.js"></script>
 </body>
 </html>
