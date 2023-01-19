@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,19 +9,35 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div>Weather program</div>
-        <input id="searchCity" type="text">
-        <input type="button" onclick="myFunction()" value="Submit">
-    </header>
-    <nav>miasta</nav>
-    <section></section>
-    <article>tekst</article>
+    <nav>
+        <section class="top-banner">
+            <div class="container">
+                <h1 class="heading">Weather App</h1>
+                <div id="form">
+                    <input list="cities" id="searchBar" type="text" placeholder="search" autofocus>
+                    <button type="submit" id="searchBtn">Search</button>
+                    <datalist id="cities"></datalist>
+                </div>
+            </div>
+        </section>
+    </nav>
+    <main>
+        <template id="weatherTemp">
+            <div class="weather">
+                <h1 class="city">Warsaw</h2>
+                    <h2 class="temp">5°C
+                </h1>
+                <div class="flex">
+                    <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon" />
+                    <div class="description">Cloudy</div>
+                </div>
+                <div class="humidity">Humidity: 30%</div>
+                <div class="feelslike">Feels like: 0&deg;C</div>
+                <div class="wind">Wind speed: 10 km/h</div>
+            </div>
+        </template>
+    </main>
 
-    <p id="test"></p>
-    
-    <footer>Weather program</footer>
-    <script src="index.js"></script>
-
+    <script type="module" src="main.js"></script>
 </body>
 </html>
