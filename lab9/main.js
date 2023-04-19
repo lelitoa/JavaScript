@@ -62,6 +62,7 @@ const displayError = (errorMessage) => {
 searchbBtn.addEventListener('click', () => {
   const city = searchBar.value;
   console.log('clicked with', city);
+  // console.log(city);
   Storage.hasAvailableSpace() ?
     addWeather(city)
       .then(city => Storage.set(city))
@@ -115,3 +116,6 @@ class Storage {
     else return [];
   }
 }
+
+// var tmp = document.getElementById('test');
+// tmp.innerHTML += city;
